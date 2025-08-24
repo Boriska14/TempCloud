@@ -1,0 +1,129 @@
+
+# TempCloud-IoT
+
+## 🚀 Description
+Ce projet est un **mini-projet IoT simulé 100% sur PC**.  
+Il simule un capteur de température qui envoie des données toutes les 10 secondes vers une base de données PostgreSQL, et affiche ces données sur un **dashboard Grafana en temps réel**.
+
+Ce projet est conçu pour les débutants qui veulent se familiariser avec :  
+- Python pour la simulation de capteurs  
+- MQTT pour la communication des données  
+- PostgreSQL pour le stockage  
+- Grafana pour la visualisation en temps réel  
+
+---
+
+## 🛠️ Tech Stack
+- **Langage** : Python 3.x  
+- **Framework backend** : FastAPI ou Flask  
+- **Simulation capteur** : script Python générant des valeurs aléatoires  
+- **MQTT broker** : Mosquitto (local)  
+- **Base de données** : PostgreSQL  
+- **Visualisation** : Grafana  
+- **Gestion Docker** : Docker pour Grafana et éventuellement PostgreSQL  
+
+---
+
+## 📂 Structure du projet
+```
+
+TempCloud/
+├─ backend/                  # Backend FastAPI/Flask
+│  └─ main.py
+├─ sensor/                   # Simulation capteur
+│  └─ sensor.py
+├─ docker/                   # Conteneurs Docker (Grafana, PostgreSQL)
+├─ requirements.txt          # Dépendances Python
+└─ README.md
+
+````
+
+---
+
+## ⚡ Installation et configuration
+
+### 1. Cloner le projet
+```bash
+git clone https://github.com/ton_nom_utilisateur/TempCloud-IoT.git
+cd TempCloud-IoT
+````
+
+### 2. Créer un environnement virtuel Python
+
+```bash
+python -m venv venv
+.\venv\Scripts\activate    # Windows
+source venv/bin/activate   # Linux / Mac
+pip install -r requirements.txt
+```
+
+### 3. Lancer le broker MQTT
+
+```bash
+ mosquitto_sub -t "iot/sensor/temperature"```
+
+### 4. Lancer le backend
+
+```bash
+cd backend
+uvicorn main:app --reload
+```
+
+### 5. Lancer la simulation du capteur
+
+```bash
+cd sensor
+python sensor.py
+```
+
+### 6. Lancer Grafana via Docker
+
+```bash
+docker run -d -p 3000:3000 --name=grafana grafana/grafana
+```
+
+* Ouvrir Grafana : [http://localhost:3000](http://localhost:3000)
+* Login : `admin / admin`
+* Configurer la data source PostgreSQL et créer le dashboard.
+
+---
+
+## 📊 Dashboard Grafana
+
+* **Graphique** : Température en temps réel
+* **Stat panel** : Dernière valeur du capteur
+
+Les données se mettent à jour automatiquement toutes les 10 secondes.
+
+---
+
+## 🧩 Fonctionnalités
+
+* Simulation d’un capteur IoT sans matériel
+* Communication via MQTT
+* Stockage des données dans PostgreSQL
+* Visualisation temps réel avec Grafana
+* Projet 100% portable sur PC
+
+---
+
+## 🔧 Améliorations possibles
+
+* Ajouter un capteur d’humidité ou de pression
+* Historisation des données sur plusieurs jours
+* Notifications ou alertes si la température dépasse un seuil
+* Docker Compose pour lancer Grafana + PostgreSQL + backend + Mosquitto d’un seul coup
+
+---
+
+## 📄 Licence
+
+MIT License
+
+```
+
+---
+
+Si tu veux, je peux te générer **la version finale prête à copier/coller dans GitHub**, avec un **diagramme ASCII simple** pour illustrer l’architecture (capteur → MQTT → PostgreSQL → Grafana).  
+Veux‑tu que je fasse ça ?
+```
