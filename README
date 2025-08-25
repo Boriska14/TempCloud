@@ -1,7 +1,7 @@
 
 # TempCloud-IoT
 
-## 🚀 Description
+##  Description
 Ce projet est un **mini-projet IoT simulé 100% sur PC**.  
 Il simule un capteur de température qui envoie des données toutes les 10 secondes vers une base de données PostgreSQL, et affiche ces données sur un **dashboard Grafana en temps réel**.
 
@@ -24,7 +24,7 @@ Ce projet est conçu pour les débutants qui veulent se familiariser avec :
 
 ---
 
-## 📂 Structure du projet
+##  Structure du projet
 ```
 
 TempCloud/
@@ -40,7 +40,7 @@ TempCloud/
 
 ---
 
-## ⚡ Installation et configuration
+##  Installation et configuration
 
 ### 1. Cloner le projet
 ```bash
@@ -88,7 +88,7 @@ docker run -d -p 3000:3000 --name=grafana grafana/grafana
 
 ---
 
-## 📊 Dashboard Grafana
+##  Dashboard Grafana
 
 * **Graphique** : Température en temps réel
 * **Stat panel** : Dernière valeur du capteur
@@ -97,7 +97,7 @@ Les données se mettent à jour automatiquement toutes les 10 secondes.
 IL est aussi possible d'emettre une alerte directement sur gafana 
 ---
 
-## 🧩 Fonctionnalités
+##  Fonctionnalités
 
 * Simulation d’un capteur IoT sans matériel
 * Communication via MQTT
