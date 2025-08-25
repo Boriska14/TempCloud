@@ -44,7 +44,7 @@ TempCloud/
 
 ### 1. Cloner le projet
 ```bash
-git clone https://github.com/ton_nom_utilisateur/TempCloud-IoT.git
+git clone https://github.com/Boriska14/TempCloud-IoT.git
 cd TempCloud-IoT
 ````
 
@@ -114,16 +114,3 @@ Les données se mettent à jour automatiquement toutes les 10 secondes.
 * Notifications ou alertes si la température dépasse un seuil
 * Docker Compose pour lancer Grafana + PostgreSQL + backend + Mosquitto d’un seul coup
 
----
-
-## 📄 Licence
-
-MIT License
-
-```
-
----
-
-Si tu veux, je peux te générer **la version finale prête à copier/coller dans GitHub**, avec un **diagramme ASCII simple** pour illustrer l’architecture (capteur → MQTT → PostgreSQL → Grafana).  
-Veux‑tu que je fasse ça ?
-```
