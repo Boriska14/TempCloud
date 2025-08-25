@@ -94,7 +94,7 @@ docker run -d -p 3000:3000 --name=grafana grafana/grafana
 * **Stat panel** : Dernière valeur du capteur
 
 Les données se mettent à jour automatiquement toutes les 10 secondes.
-
+IL est aussi possible d'emettre une alerte directement sur gafana 
 ---
 
 ## 🧩 Fonctionnalités
